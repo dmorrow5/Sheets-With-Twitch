@@ -7,7 +7,8 @@ A bare bones example on how to add a Twitch bot to your Twitch chat using tmi.js
 - [Download Node.JS](https://nodejs.org/en/download)
   - You can skip this if you already have it installed
 - Navigate to code folder with command line
-- Run `npm i`
+- Run `npm i` from repo directory
+  - This will install necessary 3rd party packages
 
 ### Create Twitch account for your chat bot
 - Log out (or use different browser) if you're already signed in with your twitch account

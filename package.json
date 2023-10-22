@@ -1,0 +1,27 @@
+{
+  "name": "twitch-bot",
+  "version": "1.0.1",
+  "description": "I am a twitch bot example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.16.4",
+    "googleapis": "^67.1.0",
+    "tmi.js": "^1.8.5"
+  },
+  "engines": {
+    "node": "7.10.x"
+  },
+  "repository": {
+    "url": "https://github.com/dmorrow5/Sheets-With-Twitch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express",
+    "twitch.tv"
+  ]
+}

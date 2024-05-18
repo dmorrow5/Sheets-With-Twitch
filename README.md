@@ -15,17 +15,31 @@ A bare bones example on how to add a Twitch bot to your Twitch chat using tmi.js
 - Create a new account for your bot to use.
 - Visit [Twitch Apps TMI](https://twitchapps.com/tmi/) to generate your OAuth token
 - Edit .env file add the USERNAME and oauth PASSWORD for your bot.
+  - You may need to change the .env variable names if they conflict with other environment variables on your machine
   - I think this has changed since I implemented this and you may need to use a token value instead
+- Update `channelName` in `constants.js` with your stream name
 - Try running the bot using the steps below to debug until you get this working
+- Set Up Auth Info
+  - Navigate to this site to register this app with your twitch account:
+    - https://dev.twitch.tv/console/apps/create
+      - Name - Something for your own reference
+      - OAuth Redirect URLs
+        - If you have an actual site, then you can enter that here, otherwise I just put `http://localhost`
+      - Category - I just put `Chat Bot`
+  - 
 
 ### Create and link your Google Sheet
+- Create a google sheet to use
+  - For the provided example, create 2 columns with the following headers
+    - Column A Header - Name
+    - Column B Header - Points
 - Follow the steps here to generate your google sheet api credentials: [Generate Service Account Creds](https://medium.com/@a.marenkov/how-to-get-credentials-for-google-sheets-456b7e88c430)
+- Generate Key for the account as JSON
   - You can copy those creds right into `service_account_creds_.json`
 - Update `project_id` in .env file - [How to find your google sheet project id](https://support.google.com/googleapi/answer/7014113?hl=en)
 - Update `SPREADSHEETID` in .env file:
   - "The Spreadsheet ID is the last string of characters in the URL for your spreadsheet. For example, in the URL https://docs.google.com/spreadsheets/d/1qpyC0XzvTcKT6EISywvqESX3A0MwQoFDE8p-Bll4hps/edit#gid=0 , the spreadsheet ID is 1qpyC0XzvTcKT6EISywvqESX3A0MwQoFDE8p-Bll4hps."
 - Configure [project Oauth consent screen](https://console.cloud.google.com/apis/credentials/consent)
-  - Make sure to specify `glitch.com` as an authorized domain (for express I think)
 
 ### Alternative
 - Follow steps in [this document](https://ei.docs.wso2.com/en/latest/micro-integrator/references/connectors/google-spreadsheet-connector/get-credentials-for-google-spreadsheet/#:~:text=Under%20Step%201%2C%20select%20Google,Access%20Token%20and%20Refresh%20Token.)
